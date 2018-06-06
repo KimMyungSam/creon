@@ -16,6 +16,9 @@ class TelegramBot:
 
     def sendMessage(self, text):
         self.core.sendMessage(chat_id = self.id, text=text)
+        
+    def sendPhoto(self, photo):
+        self.core.sendPhoto(chat_id = self.id, photo=photo)
 
     def stop(self):
         self.updater.start_polling()
