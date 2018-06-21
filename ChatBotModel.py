@@ -16,7 +16,7 @@ class TelegramBot:
 
     def sendMessage(self, text):
         self.core.sendMessage(chat_id = self.id, text=text)
-        
+
     def sendPhoto(self, photo):
         self.core.sendPhoto(chat_id = self.id, photo=photo)
 
@@ -25,10 +25,6 @@ class TelegramBot:
         self.updater.dispatcher.stop()
         self.updater.job_queue.stop()
         self.updater.stop()
-
-
-# In[5]:
-
 
 class Bot2ndBUS (TelegramBot):
     def __init__(self):
@@ -43,4 +39,3 @@ class Bot2ndBUS (TelegramBot):
         self.sendMessage('2ndBUS RUN.')
         self.updater.start_polling()
         self.updater.idle()
-
