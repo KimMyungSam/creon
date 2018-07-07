@@ -1,9 +1,3 @@
-
-# coding: utf-8
-
-# In[2]:
-
-
 import telegram
 from telegram.ext import Updater, CommandHandler
 
@@ -16,6 +10,9 @@ class TelegramBot:
 
     def sendMessage(self, text):
         self.core.sendMessage(chat_id = self.id, text=text)
+
+    def sendMessage2html(self, text):
+        self.core.sendMessage(chat_id = self.id,parse_mode='html', text=text)
 
     def sendPhoto(self, photo):
         self.core.sendPhoto(chat_id = self.id, photo=photo)
